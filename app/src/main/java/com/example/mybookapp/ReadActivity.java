@@ -17,4 +17,9 @@ public class ReadActivity extends AppCompatActivity {
         Intent intent = new Intent(this, StoryActivity.class);
         startActivity(intent);
     }
+
+    public void OnWriteStory(View view) {
+        Intent intent = new Intent(this, WriteStoryActivity.class);
+        startActivity(intent);
+    }
 }

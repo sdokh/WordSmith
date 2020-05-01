@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">វើតស្មីត</string>
+    <string name="req_pass">ស្នើពាក្យសម្ងាត់ថ្មី</string>
+    <string name="slogan">និទានអនាគតរបស់អ្នក</string>
+    <string name="login">ចូល</string>
+    <string name="chapter_title">វគ្គទី ១៖ ប្រភពអាថ៍កំបាំង </string>
+    <string name="chapter_text">វគ្គទី៖​ ១</string>
+    <string name="novel_by">និពន្ធដោយ៖ ដូ សុភា</string>
+    <string name="explore">ស្វែងរក</string>
+    <string name="username">ឈ្មោះ</string>
+    <string name="password">ពាក្យសម្ងាត់</string>
+</resources>

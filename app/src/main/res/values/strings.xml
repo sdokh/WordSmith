@@ -7,4 +7,7 @@
     <string name="chapter_text">Chapter 1</string>
     <string name="novel_by">Novel By: Sophea Do</string>
     <string name="explore">Explore</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
 </resources>

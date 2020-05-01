@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C6F1E7"
+    android:background="@color/bg_cyan"
     android:gravity="center"
     >
 
@@ -14,6 +14,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Narrate your future with us"
-        android:textColor="#59606D"/>
+        android:text="@string/slogan"
+        android:textColor="@color/text_color"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/explore"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="25dp"
+        android:onClick="OnButtonClick"/>
 </LinearLayout>

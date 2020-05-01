@@ -5,18 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-
-public class MainActivity extends AppCompatActivity {
+public class LoginPageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_startup);
+        setContentView(R.layout.activity_login);
     }
 
-    public void OnButtonClick(View view) {
-        Intent intent = new Intent(this, LoginPageActivity.class);
+    public void OnLogin(View view) {
+        Intent intent = new Intent(this, ReadActivity.class);
         startActivity(intent);
     }
-
 }

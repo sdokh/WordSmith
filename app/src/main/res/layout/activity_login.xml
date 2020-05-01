@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1"
-    android:background="#C6F1E7">
+    android:background="@color/bg_cyan">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="200dp"
@@ -41,14 +41,15 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:background="#C6F1E7"        android:layout_margin="16dp"
-            android:textColor="#59606D"/>
+            android:text="@string/login"
+            android:background="@color/bg_cyan"        android:layout_margin="16dp"
+            android:textColor="@color/text_color"
+            android:onClick="OnLogin"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Request New Password "/>
+            android:text="@string/req_pass"/>
 
     </LinearLayout>
 </LinearLayout>

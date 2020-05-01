@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="bg_cyan">#C6F1E7</color>
+    <color name="colorPrimary">#C6F1E7</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="story_bg">#f8f9fe</color>
+    <color name="text_color">#59606D</color>
+    <color name="white_bg">#fff</color>
+
 </resources>

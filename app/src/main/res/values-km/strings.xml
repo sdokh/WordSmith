@@ -9,4 +9,8 @@
     <string name="explore">ស្វែងរក</string>
     <string name="username">ឈ្មោះ</string>
     <string name="password">ពាក្យសម្ងាត់</string>
+    <string name="menu_favorites">អ្វីដែលចូលចិត្ត</string>
+    <string name="menu_logout">ចាកចេញ</string>
+    <string name="click_to_read">ចុចត្រង់នេះដើម្បីអានរឿង</string>
+    <string name="write_story">សរសេររឿងផ្ទាល់ខ្លួនរបស់អ្នក</string>
 </resources>

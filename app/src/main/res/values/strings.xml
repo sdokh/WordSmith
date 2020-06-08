@@ -9,5 +9,9 @@
     <string name="explore">Explore</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_logout">Log Out</string>
+    <string name="click_to_read">Click Here to Read a Story</string>
+    <string name="write_story">Write Your Own Story</string>
 
 </resources>

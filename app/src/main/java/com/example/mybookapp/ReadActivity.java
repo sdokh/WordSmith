@@ -3,6 +3,8 @@ package com.example.mybookapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 
 public class ReadActivity extends AppCompatActivity {
@@ -11,6 +13,13 @@ public class ReadActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.activity_main_options, menu);
+        return true;
     }
 
     public void OnReadStory(View view) {
@@ -23,3 +32,4 @@ public class ReadActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
+

@@ -27,7 +27,6 @@ public class ReadAdapter extends RecyclerView.Adapter<ReadStoryViewHolder> {
     public void onBindViewHolder(@NonNull ReadStoryViewHolder readStoryViewHolder, int i) {
         Story story = stories[i];
         readStoryViewHolder.bind(story);
-
     }
 
     @Override

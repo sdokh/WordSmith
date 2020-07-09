@@ -5,44 +5,58 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
 
 public class ReadActivity extends AppCompatActivity {
+
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read);
 
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        Story[] stories = loadStories();
-        ReadAdapter adapter = new ReadAdapter(stories);
-        recyclerView.setAdapter(adapter);
+        loadStories();
     }
 
-    private Story[] loadStories() {
-        Story story1 = new Story();
-        story1.setAuthor("Jeff is Me");
-        story1.setBody("My name is Jeff.");
-        story1.setTitle("What is your name?");
+    private void loadStories() {
+        //Load stories from server
+        String url = "http://10.0.2.2//Users/user/Desktop/Android/stories.php";
+        StringRequest request = new StringRequest(url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Gson gson = new Gson();
+                Story[] stories = gson.fromJson(response, Story[].class);
 
-        Story story2 = new Story();
-        story2.setAuthor("Paul is Me");
-        story2.setBody("My name is Paul.");
-        story2.setTitle("What is your name?");
+                ReadAdapter adapter = new ReadAdapter(stories);
+                recyclerView.setAdapter(adapter);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(ReadActivity.this, "Something went wrong while loading data from the server.", Toast.LENGTH_LONG).show();
+                Log.d("wordsmith", "Load Data Error: "+ error.getMessage());
+            }
+        });
 
-        Story story3 = new Story();
-        story3.setAuthor("Jaff is Me");
-        story3.setBody("My name is Jaff.");
-        story3.setTitle("What is your name?");
-
-        return new Story[] {story1, story2, story3};
+        //Add the req to the Queue
+        Volley.newRequestQueue(this).add(request);
     }
 
     @Override

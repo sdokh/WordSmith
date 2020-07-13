@@ -2,13 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:layout_marginTop="15dp">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:padding="10dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Author: Sophea Do"
+        android:textStyle="bold"
         android:id="@+id/txt_author"/>
 
     <TextView
@@ -27,11 +29,14 @@
         android:id="@+id/txt_body"/>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
         android:text="@string/read_novel"
         android:onClick="OnReadStory"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         />
 
 

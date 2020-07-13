@@ -4,7 +4,7 @@
     android:background="@color/story_bg">
 
     <TextView
-        android:id="@+id/chapter_title"
+        android:id="@+id/story_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/chapter_title"
@@ -24,23 +24,23 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/chapter_text"
+        android:id="@+id/story_body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/chapter_text"
         android:textColor="@color/text_color"
-        android:layout_below="@+id/chapter_title"
+        android:layout_below="@+id/story_title"
         android:layout_marginTop="35dp"
         android:layout_marginLeft="30dp"
         android:textSize="25dp"
         android:textStyle="bold"/>
     <TextView
-        android:id="@+id/novel_by"
+        android:id="@+id/story_author"
         android:textColor="@color/text_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/novel_by"
-        android:layout_below="@id/chapter_text"
+        android:layout_below="@id/story_body"
         android:layout_marginLeft="30dp"
         android:textStyle="bold"/>
 

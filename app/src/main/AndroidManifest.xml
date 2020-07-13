@@ -16,6 +16,7 @@
         <activity android:name=".WriteStoryActivity" />
         <activity android:name=".StoryActivity" />
         <activity android:name=".ReadActivity" />
+        <activity android:name=".StoryDetailActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

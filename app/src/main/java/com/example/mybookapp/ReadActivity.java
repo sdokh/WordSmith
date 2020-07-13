@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -67,8 +68,25 @@ public class ReadActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+
+        switch (item.getItemId()) //get the id which is an int
+        {
+            case R.id.logout:  // check if its the menu item next selected
+                // Single menu item is selected do something
+                // Ex: launching new activity/screen or show alert message
+                Toast.makeText(ReadActivity.this, "Logout Selected", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, LoginPageActivity.class);
+                startActivity(intent);
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     public void OnReadStory(View view) {
-        Intent intent = new Intent(this, StoryActivity.class);
+        Intent intent = new Intent(this, StoryDetailActivity.class);
         startActivity(intent);
     }
 

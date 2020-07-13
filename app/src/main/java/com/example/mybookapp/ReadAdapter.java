@@ -1,8 +1,10 @@
 package com.example.mybookapp;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,5 +35,29 @@ public class ReadAdapter extends RecyclerView.Adapter<ReadStoryViewHolder> {
     @Override
     public int getItemCount() {
         return stories.length;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        TextView txtTitle, txtBody, txtAuthor;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            //implement onClick
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Story story = new Story();
+                    Intent i = new Intent(v.getContext(), StoryDetailActivity.class);
+                    v.getContext().startActivity(i);
+                    i.putExtra("title", story.getTitle());
+                    i.putExtra("body", story.getBody());
+                    i.putExtra("author", story.getAuthor());
+                }
+            });
+
+            txtTitle = itemView.findViewById(R.id.chapter_title);
+            txtBody = itemView.findViewById(R.id.chapter_text);
+            txtAuthor = itemView.findViewById(R.id.novel_by);
+        }
     }
 }

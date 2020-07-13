@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class Story {
     private String author;
-    private long date;
     private String title;
     private String body;
 
@@ -14,14 +13,6 @@ public class Story {
 
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public long getDate() {
-        return date;
-    }
-
-    public void setDate(long date) {
-        this.date = date;
     }
 
     public String getTitle() {

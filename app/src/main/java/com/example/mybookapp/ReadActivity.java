@@ -1,15 +1,16 @@
 package com.example.mybookapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -37,7 +38,7 @@ public class ReadActivity extends AppCompatActivity {
 
     private void loadStories() {
         //Load stories from server
-        String url = "http://10.0.2.2//Users/user/Desktop/Android/stories.php";
+        String url = "http://www.json-generator.com/api/json/get/cpvIggkXNe?indent=2";
         StringRequest request = new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

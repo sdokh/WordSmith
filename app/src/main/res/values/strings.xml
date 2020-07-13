@@ -13,5 +13,6 @@
     <string name="menu_logout">Log Out</string>
     <string name="click_to_read">Click Here to Read a Story</string>
     <string name="write_story">Write Your Own Story</string>
+    <string name="read_novel">Read Novel</string>
 
 </resources>
